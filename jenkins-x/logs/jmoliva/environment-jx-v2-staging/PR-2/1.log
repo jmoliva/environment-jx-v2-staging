@@ -1,0 +1,40 @@
+
+Showing logs for build [32mjmoliva-environment-jx-v2-stagi-hp5gx-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-tzwg2[0m
+{"level":"warn","ts":1585574503.9122555,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1585574503.9128952,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjmoliva-environment-jx-v2-stagi-hp5gx-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-88x5z[0m
+{"level":"warn","ts":1585574504.5319526,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1585574504.5330727,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjmoliva-environment-jx-v2-stagi-hp5gx-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjmoliva-environment-jx-v2-stagi-hp5gx-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jmoliva-environment-jx-v2-stagi-hp5gx-q7mj4[0m
+{"level":"warn","ts":1585574508.571337,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1585574509.1603212,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*******/environment-**-v2-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjmoliva-environment-jx-v2-stagi-hp5gx-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:767f7208046fd65606054e913e86466f29ed5008,2:12f83ecf586157077f0a89047b2e5c9f575d22f8
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 12f83ecf586157077f0a89047b2e5c9f575d22f8: 767f7208046fd65606054e913e86466f29ed5008:
+DEBUG: ran git fetch --unshallow origin 12f83ecf586157077f0a89047b2e5c9f575d22f8: 767f7208046fd65606054e913e86466f29ed5008: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git reset --hard 767f7208046fd65606054e913e86466f29ed5008
+DEBUG: ran git reset --hard 767f7208046fd65606054e913e86466f29ed5008 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 12f83ecf586157077f0a89047b2e5c9f575d22f8
+DEBUG: ran git merge 12f83ecf586157077f0a89047b2e5c9f575d22f8 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 767f7208046fd65606054e913e86466f29ed5008..HEAD
+Merged SHA 12f83ecf586157077f0a89047b2e5c9f575d22f8 with commit message 'chore: Promote **-v2-testnode to version 0.0.3' into base branch master
+
+Showing logs for build [32mjmoliva-environment-jx-v2-stagi-hp5gx-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
